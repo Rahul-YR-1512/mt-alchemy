@@ -79,6 +79,7 @@ class ServicesPage extends StatelessWidget {
         children: [
           GradientImage(
             gradient: s.gradient,
+            imagePath: s.imagePath,
             height: 96,
             borderRadius: 24,
             icon: s.icon,

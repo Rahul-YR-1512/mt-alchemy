@@ -107,6 +107,7 @@ class CartPage extends StatelessWidget {
           children: [
             GradientImage(
               gradient: p.gradient,
+              imagePath: p.imagePath,
               height: 62,
               borderRadius: 14,
               icon: p.type == ProductType.digital

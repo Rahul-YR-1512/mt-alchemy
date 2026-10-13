@@ -83,7 +83,6 @@ class _HomePageState extends State<HomePage> {
 
   Widget _hero(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           begin: Alignment.topLeft,
@@ -99,49 +98,81 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          AppTagSmall(),
-          const SizedBox(height: 16),
-          Text(
-            'Elevate your value: Master human intelligence in a rapidly evolving AI-driven world',
-            style: GoogleFonts.poppins(
-              fontSize: 24,
-              height: 1.25,
-              fontWeight: FontWeight.w700,
-              color: Colors.white,
-            ),
-          ),
-          const SizedBox(height: 14),
-          Text(
-            'We don\'t just run activities. We shift mindsets, behaviours, and team culture.',
-            style: GoogleFonts.inter(
-              fontSize: 14,
-              height: 1.5,
-              color: Colors.white.withValues(alpha: 0.9),
-            ),
-          ),
-          const SizedBox(height: 22),
-          Wrap(
-            spacing: 12,
-            runSpacing: 12,
-            children: [
-              YellowButton(
-                label: 'I\'m an Individual',
-                icon: Icons.person_outline,
-                onPressed: () =>
-                    Navigator.pushNamed(context, Routes.register, arguments: false),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(28),
+        child: Stack(
+          children: [
+            Positioned.fill(
+              child: Image.asset(
+                'assets/images/hero_home.png',
+                fit: BoxFit.cover,
+                errorBuilder: (_, _, _) => const SizedBox.shrink(),
               ),
-              WhiteButton(
-                label: 'I\'m an Employer',
-                icon: Icons.business_center_outlined,
-                onPressed: () => Navigator.pushNamed(
-                    context, Routes.employerDashboard),
+            ),
+            Positioned.fill(
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      AppColors.deepBlue.withValues(alpha: 0.94),
+                      AppColors.purple.withValues(alpha: 0.84),
+                    ],
+                  ),
+                ),
               ),
-            ],
-          ),
-        ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  AppTagSmall(),
+                  const SizedBox(height: 16),
+                  Text(
+                    'Elevate your value: Master human intelligence in a rapidly evolving AI-driven world',
+                    style: GoogleFonts.poppins(
+                      fontSize: 24,
+                      height: 1.25,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(height: 14),
+                  Text(
+                    'We don\'t just run activities. We shift mindsets, behaviours, and team culture.',
+                    style: GoogleFonts.inter(
+                      fontSize: 14,
+                      height: 1.5,
+                      color: Colors.white.withValues(alpha: 0.9),
+                    ),
+                  ),
+                  const SizedBox(height: 22),
+                  Wrap(
+                    spacing: 12,
+                    runSpacing: 12,
+                    children: [
+                      YellowButton(
+                        label: 'I\'m an Individual',
+                        icon: Icons.person_outline,
+                        onPressed: () => Navigator.pushNamed(
+                            context, Routes.register,
+                            arguments: false),
+                      ),
+                      WhiteButton(
+                        label: 'I\'m an Employer',
+                        icon: Icons.business_center_outlined,
+                        onPressed: () => Navigator.pushNamed(
+                            context, Routes.employerDashboard),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

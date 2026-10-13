@@ -75,6 +75,7 @@ class SampleData {
       description:
           'A foundational programme that helps professionals understand, regulate and harness their emotions — turning self-awareness into a daily competitive advantage at work.',
       gradient: const [Color(0xFF1F1A8C), Color(0xFF7A6CE0)],
+      imagePath: 'assets/images/course_eq.png',
       instructor: 'Mabel Tan KH',
       hours: 6,
       moduleCount: 5,
@@ -104,6 +105,7 @@ class SampleData {
       description:
           'Equip leaders with mindful decision-making and human-centred leadership practices to stay calm, focused and authentic in a rapidly evolving AI-driven world.',
       gradient: const [Color(0xFF8E7FE0), Color(0xFF4A3FBF)],
+      imagePath: 'assets/images/course_leadership.png',
       instructor: 'Mabel Tan KH',
       hours: 8,
       moduleCount: 5,
@@ -133,6 +135,7 @@ class SampleData {
       description:
           'Practical mindfulness exercises designed to reduce stress, prevent burnout and build sustainable well-being habits right in the flow of the workday.',
       gradient: const [Color(0xFF3FC1A9), Color(0xFF1F1A8C)],
+      imagePath: 'assets/images/course_mindfulness.png',
       instructor: 'Mabel Tan KH',
       hours: 4,
       moduleCount: 5,
@@ -162,6 +165,7 @@ class SampleData {
       description:
           'A practical guide to clear, empathetic and assertive communication — enabling teams to collaborate with fewer conflicts and more trust.',
       gradient: const [Color(0xFFFF9F43), Color(0xFF1F1A8C)],
+      imagePath: 'assets/images/course_communication.png',
       instructor: 'Mabel Tan KH',
       hours: 5,
       moduleCount: 5,
@@ -190,6 +194,7 @@ class SampleData {
       tag: 'PDF Workbook',
       type: ProductType.digital,
       gradient: const [Color(0xFF1F1A8C), Color(0xFF8E7FE0)],
+      imagePath: 'assets/images/product_workbook.png',
       description:
           'A 60-page guided workbook of self-reflection prompts, emotional check-ins and practical exercises to turn feelings into clarity and action.',
       icon: 'description',
@@ -201,6 +206,7 @@ class SampleData {
       tag: 'Digital Journal',
       type: ProductType.digital,
       gradient: const [Color(0xFF8E7FE0), Color(0xFF4A3FBF)],
+      imagePath: 'assets/images/product_journal.png',
       description:
           'A beautifully designed 30-day digital journal with daily mindfulness prompts, gratitude pages and weekly reflection rhythms.',
       icon: 'auto_stories',
@@ -212,6 +218,7 @@ class SampleData {
       tag: 'Card Deck',
       type: ProductType.physical,
       gradient: const [Color(0xFFFFE863), Color(0xFFFFB020)],
+      imagePath: 'assets/images/product_cards.png',
       description:
           '54 powerful questions printed on premium cards to spark meaningful EQ conversations in meetings, retreats and team sessions.',
       icon: 'style',
@@ -223,6 +230,7 @@ class SampleData {
       tag: 'Team Kit',
       type: ProductType.physical,
       gradient: const [Color(0xFFFFB020), Color(0xFFFFE863)],
+      imagePath: 'assets/images/product_kit.png',
       description:
           'A complete facilitator kit with workbooks, cards and activity guides to run a full team engagement programme with your team.',
       icon: 'inventory_2',
@@ -366,6 +374,7 @@ class SampleData {
           'A confidential team diagnostic that measures stress, engagement and well-being to design the right intervention.',
       forWho: 'HR leaders and teams who want data before action.',
       gradient: [Color(0xFF3FC1A9), Color(0xFF1F1A8C)],
+      imagePath: 'assets/images/service_wellbeing.png',
       icon: Icons.health_and_safety_outlined,
     ),
     ServiceItem(
@@ -374,6 +383,7 @@ class SampleData {
           'Workshops and coaching that build emotional intelligence and calm, focused workplaces.',
       forWho: 'Individuals and teams wanting greater self-awareness and resilience.',
       gradient: [Color(0xFF1F1A8C), Color(0xFF8E7FE0)],
+      imagePath: 'assets/images/service_eq.png',
       icon: Icons.self_improvement_outlined,
     ),
     ServiceItem(
@@ -382,6 +392,7 @@ class SampleData {
           'Authentic leadership development and communication skills that turn managers into coaches.',
       forWho: 'Team leads, managers and emerging leaders.',
       gradient: [Color(0xFF8E7FE0), Color(0xFF4A3FBF)],
+      imagePath: 'assets/images/service_leadership.png',
       icon: Icons.groups_outlined,
     ),
     ServiceItem(
@@ -390,6 +401,7 @@ class SampleData {
           'Purpose-driven team days that move from activities to lasting behavioural change.',
       forWho: 'Teams ready to build trust and collaboration.',
       gradient: [Color(0xFF6A5AE0), Color(0xFF3FC1A9)],
+      imagePath: 'assets/images/service_teambuilding.png',
       icon: Icons.handshake_outlined,
     ),
     ServiceItem(
@@ -398,6 +410,7 @@ class SampleData {
           'Human-centred CSR and ESG programmes that engage people and community meaningfully.',
       forWho: 'Organisations embedding social value into strategy.',
       gradient: [Color(0xFF3FC1A9), Color(0xFF2E9E6B)],
+      imagePath: 'assets/images/service_csr.png',
       icon: Icons.volunteer_activism_outlined,
     ),
     ServiceItem(
@@ -406,6 +419,7 @@ class SampleData {
           'Bespoke learning journeys designed around your culture, context and goals.',
       forWho: 'Organisations with specific people-development challenges.',
       gradient: [Color(0xFFFF9F43), Color(0xFF1F1A8C)],
+      imagePath: 'assets/images/service_custom.png',
       icon: Icons.category_outlined,
     ),
   ];

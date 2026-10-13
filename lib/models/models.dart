@@ -17,6 +17,7 @@ class Course {
   final String tagline;
   final String description;
   final List<Color> gradient;
+  final String? imagePath;
   final String instructor;
   final int hours;
   final int moduleCount;
@@ -35,6 +36,7 @@ class Course {
     required this.tagline,
     required this.description,
     required this.gradient,
+    this.imagePath,
     required this.instructor,
     required this.hours,
     required this.moduleCount,
@@ -54,6 +56,7 @@ class Product {
   final String tag;
   final ProductType type;
   final List<Color> gradient;
+  final String? imagePath;
   final String description;
   final String icon;
 
@@ -64,6 +67,7 @@ class Product {
     required this.tag,
     required this.type,
     required this.gradient,
+    this.imagePath,
     required this.description,
     required this.icon,
   });
@@ -133,6 +137,7 @@ class ServiceItem {
   final String description;
   final String forWho;
   final List<Color> gradient;
+  final String? imagePath;
   final IconData icon;
 
   const ServiceItem({
@@ -140,6 +145,7 @@ class ServiceItem {
     required this.description,
     required this.forWho,
     required this.gradient,
+    this.imagePath,
     required this.icon,
   });
 }

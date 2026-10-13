@@ -24,6 +24,7 @@ class ProductDetailPage extends StatelessWidget {
             children: [
               GradientImage(
                 gradient: product.gradient,
+                imagePath: product.imagePath,
                 height: 230,
                 borderRadius: 28,
                 icon: product.type == ProductType.digital

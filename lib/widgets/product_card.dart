@@ -29,6 +29,7 @@ class ProductCard extends StatelessWidget {
             children: [
               GradientImage(
                 gradient: product.gradient,
+                imagePath: product.imagePath,
                 height: 116,
                 borderRadius: 24,
                 icon: isDigital ? Icons.cloud_download_outlined : Icons.inventory_2_outlined,

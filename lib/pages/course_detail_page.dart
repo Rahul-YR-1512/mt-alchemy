@@ -230,7 +230,6 @@ class CourseDetailPage extends StatelessWidget {
   Widget _header() {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(24, 28, 24, 28),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topLeft,
@@ -242,25 +241,60 @@ class CourseDetailPage extends StatelessWidget {
           bottomRight: Radius.circular(28),
         ),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          AppTag(
-            label: course.category,
-            background: Colors.white.withValues(alpha: 0.9),
-            textColor: AppColors.deepBlue,
-          ),
-          const SizedBox(height: 14),
-          Text(
-            course.tagline,
-            style: GoogleFonts.poppins(
-              fontSize: 20,
-              fontWeight: FontWeight.w700,
-              color: Colors.white,
-              height: 1.35,
+      child: ClipRRect(
+        borderRadius: const BorderRadius.only(
+          bottomLeft: Radius.circular(28),
+          bottomRight: Radius.circular(28),
+        ),
+        child: Stack(
+          children: [
+            if (course.imagePath != null)
+              Positioned.fill(
+                child: Image.asset(
+                  course.imagePath!,
+                  fit: BoxFit.cover,
+                  errorBuilder: (_, _, _) => const SizedBox.shrink(),
+                ),
+              ),
+            Positioned.fill(
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      course.gradient.first.withValues(alpha: 0.92),
+                      course.gradient.last.withValues(alpha: 0.82),
+                    ],
+                  ),
+                ),
+              ),
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.fromLTRB(24, 28, 24, 28),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  AppTag(
+                    label: course.category,
+                    background: Colors.white.withValues(alpha: 0.9),
+                    textColor: AppColors.deepBlue,
+                  ),
+                  const SizedBox(height: 14),
+                  Text(
+                    course.tagline,
+                    style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                      height: 1.35,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

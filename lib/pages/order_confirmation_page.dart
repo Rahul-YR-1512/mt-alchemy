@@ -76,6 +76,7 @@ class OrderConfirmationPage extends StatelessWidget {
                           children: [
                             GradientImage(
                               gradient: item.product.gradient,
+                              imagePath: item.product.imagePath,
                               height: 46,
                               borderRadius: 12,
                               icon: Icons.shopping_bag_outlined,

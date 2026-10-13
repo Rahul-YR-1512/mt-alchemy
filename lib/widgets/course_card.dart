@@ -20,6 +20,7 @@ class CourseCard extends StatelessWidget {
         children: [
           GradientImage(
             gradient: course.gradient,
+            imagePath: course.imagePath,
             height: 128,
             borderRadius: 24,
             icon: Icons.school_outlined,

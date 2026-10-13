@@ -50,12 +50,15 @@ class AppTag extends StatelessWidget {
 }
 
 /// A gradient block that stands in for course / product imagery.
+/// When [imagePath] is provided the bundled image fills the block with a
+/// soft scrim so any overlaid tag or text stays legible.
 class GradientImage extends StatelessWidget {
   final List<Color> gradient;
   final double height;
   final double borderRadius;
   final IconData? icon;
   final Widget? overlay;
+  final String? imagePath;
 
   const GradientImage({
     super.key,
@@ -64,6 +67,7 @@ class GradientImage extends StatelessWidget {
     this.borderRadius = 20,
     this.icon,
     this.overlay,
+    this.imagePath,
   });
 
   @override
@@ -79,25 +83,48 @@ class GradientImage extends StatelessWidget {
         ),
         borderRadius: BorderRadius.circular(borderRadius),
       ),
-      child: Stack(
-        children: [
-          Positioned(
-            right: -18,
-            bottom: -18,
-            child: Icon(
-              icon ?? Icons.auto_awesome,
-              size: height * 0.7,
-              color: Colors.white.withValues(alpha: 0.14),
-            ),
-          ),
-          if (overlay != null)
-            Positioned.fill(
-              child: Padding(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(borderRadius),
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            if (imagePath != null)
+              Image.asset(
+                imagePath!,
+                fit: BoxFit.cover,
+                errorBuilder: (_, _, _) => const SizedBox.shrink(),
+              )
+            else
+              Positioned(
+                right: -18,
+                bottom: -18,
+                child: Icon(
+                  icon ?? Icons.auto_awesome,
+                  size: height * 0.7,
+                  color: Colors.white.withValues(alpha: 0.14),
+                ),
+              ),
+            if (imagePath != null)
+              const DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color(0x66000000),
+                      Color(0x14000000),
+                      Color(0x73000000),
+                    ],
+                  ),
+                ),
+              ),
+            if (overlay != null)
+              Padding(
                 padding: const EdgeInsets.all(12),
                 child: overlay!,
               ),
-            ),
-        ],
+          ],
+        ),
       ),
     );
   }
