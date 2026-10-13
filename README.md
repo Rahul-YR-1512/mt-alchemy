@@ -46,9 +46,72 @@ https://<username>.github.io/<repository>/
 
 ## Reference screenshots & diagrams
 
-| Home | Store | Employer Dashboard |
-|---|---|---|
-| ![Home](docs/reference/screenshots/01_home_mobile.png) | ![Store](docs/reference/screenshots/12_store.png) | ![Employer Dashboard](docs/reference/screenshots/22_employer_dashboard.png) |
+Static design reference for every screen (phone width unless `desktop`). Source images live in `docs/reference/`. A standalone gallery is also available at **[docs/reference/REFERENCE.md](docs/reference/REFERENCE.md)**.
 
-Full gallery — every screen plus the sitemap, user-journey and ERD diagrams:
-**[docs/reference/REFERENCE.md](docs/reference/REFERENCE.md)**
+### Diagrams
+
+| Sitemap | User Journeys | ERD |
+|---|---|---|
+| ![Sitemap](docs/reference/diagrams/sitemap.png) | ![Journeys](docs/reference/diagrams/journeys.png) | ![ERD](docs/reference/diagrams/erd.png) |
+
+### Home & Navigation
+
+| Home | Home (scrolled) | Drawer |
+|---|---|---|
+| ![Home](docs/reference/screenshots/01_home_mobile.png) | ![Home scrolled](docs/reference/screenshots/01b_home_mobile_scrolled.png) | ![Drawer](docs/reference/screenshots/02_drawer.png) |
+
+### Register & Login
+
+| Register (validation) | Register (filled) | Register (employer) | Login |
+|---|---|---|---|
+| ![Register validation](docs/reference/screenshots/03_register_validation.png) | ![Register filled](docs/reference/screenshots/04_register_filled.png) | ![Register employer](docs/reference/screenshots/21_register_employer.png) | ![Login](docs/reference/screenshots/05b_login.png) |
+
+### Learning
+
+| Learning Hub | Course Detail | Enrol Dialog |
+|---|---|---|
+| ![Learning Hub](docs/reference/screenshots/05_learning_hub.png) | ![Course Detail](docs/reference/screenshots/08_course_detail.png) | ![Enrol Dialog](docs/reference/screenshots/09_enrol_dialog.png) |
+
+| Course Player | Player Controls | Learner Dashboard |
+|---|---|---|
+| ![Course Player](docs/reference/screenshots/10_course_player.png) | ![Player Controls](docs/reference/screenshots/10b_course_player_controls.png) | ![Learner Dashboard](docs/reference/screenshots/11_learner_dashboard.png) |
+
+### Store & Checkout
+
+| Store | Product Detail | Cart |
+|---|---|---|
+| ![Store](docs/reference/screenshots/12_store.png) | ![Product Detail](docs/reference/screenshots/13_product_detail.png) | ![Cart](docs/reference/screenshots/14_cart.png) |
+
+| Checkout | Checkout (payment) | Checkout (validation) |
+|---|---|---|
+| ![Checkout](docs/reference/screenshots/15_checkout.png) | ![Checkout payment](docs/reference/screenshots/16b_checkout_payment.png) | ![Checkout validation](docs/reference/screenshots/16_checkout_validation.png) |
+
+| Order Confirmation | Digital Library |
+|---|---|
+| ![Order Confirmation](docs/reference/screenshots/17_order_confirmation.png) | ![Digital Library](docs/reference/screenshots/18_digital_library.png) |
+
+### Employer
+
+| Employer Dashboard | Add Employee | Employee List |
+|---|---|---|
+| ![Employer Dashboard](docs/reference/screenshots/22_employer_dashboard.png) | ![Add Employee](docs/reference/screenshots/23_add_employee.png) | ![Employee List](docs/reference/screenshots/23b_employee_list.png) |
+
+| Assign Course | Assign Dialog | Reports |
+|---|---|---|
+| ![Assign Course](docs/reference/screenshots/24_assign_course.png) | ![Assign Dialog](docs/reference/screenshots/25_assign_dialog.png) | ![Reports](docs/reference/screenshots/26_reports.png) |
+
+### Services, Insights, Contact & About
+
+| Services | Insights | Contact (validation) | Contact (success) | About |
+|---|---|---|---|---|
+| ![Services](docs/reference/screenshots/07_services.png) | ![Insights](docs/reference/screenshots/27_insights.png) | ![Contact validation](docs/reference/screenshots/19_contact_validation.png) | ![Contact success](docs/reference/screenshots/20_contact_success.png) | ![About](docs/reference/screenshots/06_about.png) |
+
+### Admin (bonus) & Desktop
+
+| Admin Dashboard | Admin Courses | Admin Products |
+|---|---|---|
+| ![Admin Dashboard](docs/reference/screenshots/33_admin_dashboard.png) | ![Admin Courses](docs/reference/screenshots/34_admin_courses.png) | ![Admin Products](docs/reference/screenshots/35_admin_products.png) |
+
+| Home (desktop) | Learning (desktop) | Player (desktop) |
+|---|---|---|
+| ![Home desktop](docs/reference/screenshots/30_home_desktop.png) | ![Learning desktop](docs/reference/screenshots/31_learning_desktop.png) | ![Player desktop](docs/reference/screenshots/32_player_desktop.png) |
