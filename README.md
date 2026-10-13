@@ -43,3 +43,12 @@ Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the web 
 ```
 https://<username>.github.io/<repository>/
 ```
+
+## Reference screenshots & diagrams
+
+| Home | Store | Employer Dashboard |
+|---|---|---|
+| ![Home](docs/reference/screenshots/01_home_mobile.png) | ![Store](docs/reference/screenshots/12_store.png) | ![Employer Dashboard](docs/reference/screenshots/22_employer_dashboard.png) |
+
+Full gallery — every screen plus the sitemap, user-journey and ERD diagrams:
+**[docs/reference/REFERENCE.md](docs/reference/REFERENCE.md)**
